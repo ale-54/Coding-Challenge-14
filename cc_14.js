@@ -29,3 +29,12 @@ function createSupportTicket(customerName, issue, priority) {
     ticketCard.appendChild(resolveButton);
     ticketContainer.appendChild(ticketCard);
 };
+
+//Task 3: Converting NodeLists to Arrays for Bulk Updates
+function highlightHighPriorityTickets() {
+const highlightHighPriorityTickets = document.querySelectorAll('highlightHighPriorityTickets');
+const highlightLowPriorityTicketsArray = Array.from(highlightHighPriorityTickets);
+highlightLowPriorityTicketsArray.forEach((ticket) => {
+    ticket.style.backgroundColor = 'red';
+});
+}
