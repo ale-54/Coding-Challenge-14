@@ -30,6 +30,14 @@ function createSupportTicket(customerName, issue, priority) {
     ticketContainer.appendChild(ticketCard);
 };
 
+//Task 4: Implementing Ticket Resolution with Event Bubbling
+document.getElementById('ticketContainer').addEventListener('click', (event) => {
+    if (event.target.classlist.contains === ('ticket')) {
+        console.log('Ticket clicked:', e.target);
+        event.stopPropagation();
+    }
+});
+
 //Task 3: Converting NodeLists to Arrays for Bulk Updates
 function highlightHighPriorityTickets() {
 const highlightHighPriorityTickets = document.querySelectorAll('highlightHighPriorityTickets');
@@ -38,3 +46,4 @@ highlightLowPriorityTicketsArray.forEach((ticket) => {
     ticket.style.backgroundColor = 'red';
 });
 }
+
